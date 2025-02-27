@@ -1,97 +1,72 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# Universidad Central del Ecuador  
+## Facultad de Ingeniería y Ciencias Aaplicadas  
+### Ingeniería en Sistemas de Información  
 
-# Getting Started
+# Minería de Datos - FloreStyle  
+## Grupo 7  
+### Integrantes:  
+- Klever Robalino  
+- Kevin Zurita  
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+---
 
-## Step 1: Start Metro
+# FloreStyle  
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+FloreStyle es una aplicación móvil desarrollada en React Native que utiliza un modelo preentrenado de YOLO (You Only Look Once) para el reconocimiento de imágenes de flores. La aplicación cuenta con un backend en Flask que maneja un endpoint para procesar las imágenes y obtener recomendaciones de cuidado y características de las flores reconocidas. Adicionalmente, se integra la API de OpenAI para proporcionar información detallada y personalizada sobre las flores detectadas.
 
-To start the Metro dev server, run the following command from the root of your React Native project:
+## Características principales  
+- **Reconocimiento de imágenes**: Utiliza un modelo preentrenado de YOLO para identificar diferentes tipos de flores.  
+- **Recomendaciones de cuidado**: Proporciona consejos y características específicas para el cuidado de las flores reconocidas.  
+- **Integración con OpenAI**: Utiliza la API de OpenAI para generar recomendaciones detalladas y personalizadas.  
+- **Desarrollo móvil**: La aplicación está construida en React Native, lo que permite su uso en dispositivos iOS y Android.  
+- **Backend en Flask**: Maneja el procesamiento de imágenes y la comunicación con el modelo de YOLO y la API de OpenAI.  
 
-```sh
-# Using npm
-npm start
+## Diagrama de flujo  
 
-# OR using Yarn
-yarn start
-```
+1. **Envío de imagen**: El usuario captura o selecciona una imagen desde la aplicación móvil.  
+2. **Procesamiento en el backend**: La imagen se envía al backend en Flask, donde se utiliza el modelo de YOLO para reconocer las flores.  
+3. **Generación de recomendaciones**: El backend utiliza la API de OpenAI para generar recomendaciones de cuidado y características de las flores detectadas.  
+4. **Devolución de resultados**: Los resultados se envían de vuelta a la aplicación móvil, donde se muestran al usuario.  
+ 
+## Requisitos del sistema  
+- **React Native**: Para el desarrollo de la aplicación móvil.  
+- **Flask**: Para el backend y el manejo de endpoints.  
+- **YOLO**: Modelo preentrenado para el reconocimiento de imágenes.  
+- **OpenAI API**: Para la generación de recomendaciones.  
+- **Android Studio**: Para la compilación y emulación de la aplicación en dispositivos Android.  
+- **Node.js y npm**: Para gestionar las dependencias de React Native.  
+- **Python**: Para el backend en Flask.  
 
-## Step 2: Build and run your app
+## Instalación y configuración  
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+1. Clona el repositorio:  
+   ```bash  
+   git clone https://github.com/tu-usuario/florestyle.git  
+   cd florestyle  
 
-### Android
+2. Instala las dependencias del backend:
+   ```bash
+   cd backend  
+   pip install -r requirements.txt  
 
-```sh
-# Using npm
-npm run android
+3. Instala las dependencias de la aplicación móvil:
+   ```bash
+   cd ../modeloflores  
+   npm install  
 
-# OR using Yarn
-yarn android
-```
+4. Configura las variables de entorno:
+   Crea un archivo .env en la carpeta backend y agrega tu clave de API de OpenAI:
+   ```bash
+   OPENAI_API_KEY=tu_clave_api  
 
-### iOS
+5. Ejecuta el backend:
+    ```bash
+    bash
+    Copy
+    cd ../backend  
+    python app.py 
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
-
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
-
-## Step 3: Modify your app
-
-Now that you have successfully run the app, let's make changes!
-
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
-
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
-
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+6. Ejecuta la aplicación móvil:
+    ```bash
+    cd ../modeloflores  
+    npx react-native run-android  
