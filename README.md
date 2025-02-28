@@ -51,7 +51,7 @@ FloreStyle es una aplicación móvil desarrollada en React Native que utiliza un
 
 3. Instala las dependencias de la aplicación móvil:
    ```bash
-   cd ../modeloflores  
+   cd ../florestyle  
    npm install  
 
 4. Configura las variables de entorno:
@@ -68,5 +68,5 @@ FloreStyle es una aplicación móvil desarrollada en React Native que utiliza un
 
 6. Ejecuta la aplicación móvil:
     ```bash
-    cd ../modeloflores  
+    cd ../florestyle  
     npx react-native run-android  
